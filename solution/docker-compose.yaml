@@ -8,3 +8,11 @@ services:
             - /home/cloud_user/csvserver_solution/solution/inputFile:/csvserver/inputdata
         environment:
             CSVSERVER_BORDER: Orange
+    prometheus:
+        image: prom/prometheus:v2.22.0
+        ports:
+            - 9090:9090
+        volumes:
+            - /home/docker/interview_new/prometheus.yml:/etc/prometheus/prometheus.yml
+        depends_on:
+            - csvserver
