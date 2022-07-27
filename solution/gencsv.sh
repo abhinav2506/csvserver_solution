@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Test Comment
 if [[ $# -eq 0 ]]
 then
     totaliter=10
